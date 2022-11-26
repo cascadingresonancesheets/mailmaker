@@ -1,0 +1,38 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 1000;
+  transition: 0.4s;
+  opacity: 1;
+
+  &__spinner {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    margin-left: -20px;
+    border: 5px solid #fff;
+    border-top: 4px solid $main;
+    border-radius: 50%;
+    animation: spin 1.4s linear infinite;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

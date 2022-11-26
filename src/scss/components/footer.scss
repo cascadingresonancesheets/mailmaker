@@ -1,0 +1,170 @@
+.footer {
+  margin-top: 90px;
+
+  &__wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 274px auto auto 324px;
+    gap: 74px;
+    justify-content: space-between;
+    padding-bottom: 18px;
+  }
+
+  &__slogan {
+    padding-top: 28px;
+    line-height: 1.5;
+    color: $gray;
+  }
+
+  &__subscribe {
+    justify-self: flex-end;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 32px;
+  }
+
+  &__copy,
+  &__bottom-slogan {
+    font-size: 12px;
+    color: #bbb;
+  }
+
+  @media screen and (max-width: $xl) {
+    &__wrapper {
+      padding: 0 20px;
+    }
+
+    &__grid {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      padding-bottom: 64px;
+    }
+
+    &__company,
+    &__subscribe {
+      flex-basis: 35%;
+    }
+  }
+
+  @media screen and (max-width: $md) {
+    &__company,
+    &__subscribe {
+      flex-basis: 100%;
+    }
+  }
+
+  @media screen and (max-width: $sm) {
+    &__grid {
+      flex-direction: column;
+      gap: 48px;
+      font-size: 15px;
+    }
+  }
+}
+
+.footer-nav {
+  flex-shrink: 0;
+
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    color: $black;
+    padding-bottom: 18px;
+  }
+
+  &__link {
+    display: block;
+    color: $gray;
+    padding: 7px 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer-subscribe {
+  &__caption {
+    line-height: 1.5;
+    color: $gray;
+    padding-bottom: 27px;
+  }
+
+  &__form-field {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__input {
+    background-color: $bg;
+    width: 270px;
+    height: 43px;
+    padding: 0 14px;
+    font-size: 15px;
+
+    @media screen and (max-width: 400px) {
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    width: 43px;
+    height: 43px;
+    background-color: $main;
+    color: #fff;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+}
+
+.footer-socials {
+  padding-bottom: 84px;
+
+  @media screen and (max-width: $sm) {
+    padding-bottom: 60px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: $black;
+    text-transform: uppercase;
+    padding-bottom: 16px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__link {
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #3cb265;
+    border-radius: 50%;
+    display: flex;
+    color: #3cb265;
+    font-size: 15px;
+    transition: 0.2s;
+
+    &:hover {
+      color: #fff;
+      background-color: #3cb265;
+    }
+  }
+
+  &__icon {
+    margin: auto;
+  }
+}

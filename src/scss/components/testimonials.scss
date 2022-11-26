@@ -1,0 +1,176 @@
+.testimonials {
+  @include section-offset;
+  @include wrapper;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    padding-bottom: 16px;
+    max-width: 700px;
+    text-align: center;
+  }
+
+  &__descr {
+    padding-bottom: 50px;
+    max-width: 700px;
+    text-align: center;
+
+    @media screen and (max-width: $xl) {
+      padding-bottom: 40px;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    width: 100%;
+  }
+}
+
+.testimonials-slider {
+  max-width: 970px;
+  background-color: $bg;
+
+  &__btn {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba($main, 0.2);
+    border-radius: 50%;
+    transition: 0.35s;
+
+    @media screen and (max-width: $xl) {
+      display: none;
+    }
+
+    i {
+      color: $main;
+      margin: auto;
+      font-size: 14px;
+      transition: inherit;
+    }
+
+    &:hover {
+      background-color: $main;
+
+      i {
+        color: #fff;
+      }
+    }
+
+    &_prev {
+      left: 0;
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    &_next {
+      right: 0;
+    }
+  }
+}
+
+.slider-item {
+  background-color: $bg;
+  padding: 74px 65px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+
+  &__big-quote {
+    font-weight: 700;
+    font-size: 38px;
+    color: $black;
+    line-height: 1.11;
+  }
+
+  &__quote {
+    color: $black;
+    line-height: 1.88;
+  }
+
+  &__person {
+    position: relative;
+    padding-left: 72px;
+    margin-top: 28px;
+  }
+
+  &__person-img {
+    width: 48px;
+    height: 48px;
+    border: 1px solid $main;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__person-name {
+    color: $black;
+    line-height: 1.5;
+  }
+
+  &__person-position {
+    font-size: 13px;
+    line-height: 1.85;
+    color: #3c3c3c;
+  }
+
+  @media screen and (max-width: $xl) {
+    padding: 40px;
+
+    &__big-quote {
+      font-size: 32px;
+      line-height: normal;
+    }
+
+    &__quote {
+      line-height: 1.4;
+    }
+  }
+
+  @media screen and (max-width: $md) {
+    flex-direction: column;
+
+    &__big-quote {
+      font-size: 24px;
+    }
+
+    &__quote {
+      font-size: 15px;
+    }
+  }
+}
+
+.testimonials-pagination {
+  display: none;
+
+  @media screen and (max-width: $xl) {
+    display: flex;
+  }
+
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 24px 0;
+
+  &__bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #e9e9e9;
+    border-radius: 50%;
+    transition: 0.3s;
+
+    &_active {
+      background-color: $main;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+header.header
+  .header__wrapper
+    a(href="#" aria-label="На главную").header-logo.header__logo MailMaker
+    .header__menu-wrapper.menu-wrapper
+      nav.header-nav.header__nav
+        ul.header-nav__list
+          li.header-nav__item
+            a(href="#").header-nav__link#solutions-link Решения
+              i.header-nav__link-icon.icon-chevron
+          li.header-nav__item
+            a(href="#").header-nav__link#features-link Возможности
+              i.header-nav__link-icon.icon-chevron
+          li.header-nav__item
+            a(href="#").header-nav__link#testimonials-link Отзывы
+              i.header-nav__link-icon.icon-chevron
+          li.header-nav__item
+            a(href="#").header-nav__link Поддержка
+      .header-user-actions.menu-wrapper__user-actions
+        button.header-user-actions__signin Вход
+        button.header-user-actions__signup Регистрация
+      button.menu-wrapper__close-btn.close-btn(aria-label="Закрыть меню навигации")
+        i.close-btn__icon.icon-cross
+    button.header__menu-btn.menu-btn(aria-label="Открыть меню навигации")
+      i.menu-btn__icon.icon-menu

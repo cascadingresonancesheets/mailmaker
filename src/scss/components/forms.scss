@@ -1,0 +1,57 @@
+.label {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  color: $black;
+  padding-bottom: 6px;
+}
+
+.input {
+  background-color: #fdfdfd;
+  height: 50px;
+  padding: 0 20px;
+  font-size: 15px;
+  color: $black;
+  min-width: 100px;
+  width: 100%;
+  border: 1px solid #e3e3e3;
+
+  &::placeholder {
+    color: #787272;
+  }
+
+  @media screen and (max-width: $xl) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: $md) {
+    height: 45px;
+  }
+}
+
+.form-btn {
+  background-color: #131416;
+  height: 50px;
+  padding: 0 25px;
+  color: #fff;
+  font-weight: 700;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: $main;
+  }
+
+  @media screen and (max-width: $xl) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: $md) {
+    height: 45px;
+  }
+}
+
+.sign-form {
+  &__field {
+    padding-bottom: 24px;
+  }
+}

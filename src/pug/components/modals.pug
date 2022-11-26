@@ -1,0 +1,32 @@
+.modal
+  .backdrop
+  .modal__inner
+  
+.modal-sign.modal-signin(hidden)
+  button.modal-sign__close-btn.close-btn(aria-label="Закрыть")
+    i.close-btn__icon.icon-cross
+  h2.modal-sign__title Вход в аккаунт
+  form.modal-sign__form.sign-form
+    .sign-form__field
+      label.sign-form__label.label(for="signin-email") Ваш Email
+      input.sign-form__input.input(type="email" id="signin-email" placeholder="Введите Email" required autocomplete="email")
+    .sign-form__field
+      label.sign-form__label.label(for="signin-password") Ваш пароль
+      input.sign-form__input.input(type="password" id="signin-password" placeholder="Введите пароль" required autocomplete="current-password")
+    button.sign-form__btn.form-btn(type="submit") Войти
+
+.modal-sign.modal-signup(hidden)
+  button.modal-sign__close-btn.close-btn(aria-label="Закрыть")
+    i.close-btn__icon.icon-cross
+  h2.modal-sign__title Зарегистрироваться
+  form.modal-sign__form.sign-form
+    .sign-form__field
+      label.sign-form__label.label(for="signup-email") Ваш Email
+      input.sign-form__input.input(type="email" id="signup-email" placeholder="Введите Email" required autocomplete="username")
+    .sign-form__field
+      label.sign-form__label.label(for="signup-password") Пароль
+      input.sign-form__input.input(type="password" id="signup-password" placeholder="Введите пароль" required autocomplete="new-password")
+    .sign-form__field
+      label.sign-form__label.label(for="repeat-password") Повторите пароль
+      input.sign-form__input.input(type="password" id="repeat-password" placeholder="Повторите пароль" required autocomplete="new-password")
+    button.sign-form__btn.form-btn(type="submit") Войти

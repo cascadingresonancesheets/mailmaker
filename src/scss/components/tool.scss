@@ -1,0 +1,83 @@
+.tool {
+  @include section-offset;
+  @include wrapper;
+
+  transition: 0.9s cubic-bezier(0, 0, 0.1, 1);
+  opacity: 0;
+  transform: translateY(120px);
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__wrapper {
+    position: relative;
+    min-height: 414px;
+  }
+
+  &__title {
+    max-width: 485px;
+    margin-left: auto;
+    padding-top: 100px;
+    padding-bottom: 24px;
+  }
+
+  &__descr {
+    max-width: 485px;
+    margin-left: auto;
+    padding-bottom: 45px;
+  }
+
+  &__btn {
+    margin-left: auto;
+    max-width: 485px;
+  }
+
+  &__img {
+    position: absolute;
+    left: -40px;
+    top: 0;
+  }
+
+  @media screen and (max-width: $xl) {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__title {
+      padding-top: 0;
+    }
+
+    &__title,
+    &__descr,
+    &__btn {
+      max-width: 700px;
+      margin-left: unset;
+      text-align: center;
+    }
+
+    &__descr {
+      padding-bottom: 17px;
+    }
+
+    &__img {
+      position: relative;
+      left: unset;
+      top: unset;
+      width: 70%;
+      height: auto;
+      transform: translateX(40px);
+    }
+  }
+
+  @media screen and (max-width: $md) {
+    &__img {
+      width: 90%;
+      transform: translateX(5%);
+      margin-bottom: 10px;
+    }
+  }
+}

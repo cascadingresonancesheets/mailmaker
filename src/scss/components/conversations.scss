@@ -1,0 +1,72 @@
+.conversations {
+  @include section-offset;
+  @include wrapper;
+
+  transition: 0.9s cubic-bezier(0, 0, 0.1, 1);
+  opacity: 0;
+  transform: translateY(120px);
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__wrapper {
+    position: relative;
+    min-height: 438px;
+  }
+
+  &__title {
+    max-width: 485px;
+    padding-top: 80px;
+    padding-bottom: 24px;
+  }
+
+  &__descr {
+    max-width: 485px;
+    padding-bottom: 45px;
+  }
+
+  &__btn {
+    max-width: 485px;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  @media screen and (max-width: $xl) {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__title {
+      padding-top: 0;
+    }
+
+    &__title,
+    &__descr,
+    &__btn,
+    &__img {
+      max-width: 700px;
+      text-align: center;
+    }
+
+    &__descr {
+      padding-bottom: 25px;
+    }
+
+    &__img {
+      position: relative;
+      right: unset;
+      top: unset;
+      width: 100%;
+      height: auto;
+      margin-bottom: 40px;
+    }
+  }
+}

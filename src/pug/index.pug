@@ -1,0 +1,253 @@
+doctype html
+html(lang="ru")
+  - let title = "Главная";
+  include components/__meta
+  body.page
+
+    // Preloader start
+    .preloader
+      .preloader__spinner
+    // Preloader end
+
+    // Header start
+    include components/header
+    // Header end
+
+    // main start
+    main.page__content
+
+      // Hero start
+      .hero
+        .hero__wrapper
+          // prettier-ignore
+          h1.hero__title(style="opacity: 0") <span>Маркетинг по</span>&nbsp;<strong><span>SMS</span></strong><span> и</span>&nbsp;<strong><span>электронной почте</span></strong><span> стали проще.</span>
+          p.hero__descr Вы&nbsp;можете приступить к&nbsp;автоматизации своего маркетинга за&nbsp;несколько минут
+          form.hero__form.hero-form
+            input.hero-form__input(type="email" placeholder="Введите Email" required disabled)
+            button.hero-form__btn(type="submit") Попробовать
+          img.hero__img(src="img/dashboard.png", alt="alt" width="876" height="531")
+      // Hero end
+
+      // Partners start
+      .partners
+        hr.partners__top
+        ul.partners__wrapper
+          li.partners__item.partners-item
+            img(src="img/partners/1.png", alt="alt" width="50" height="50")
+            span Upwork
+          li.partners__item.partners-item
+            img(src="img/partners/2.png", alt="alt" width="50" height="50")
+            span Warner Bros
+          li.partners__item.partners-item
+            img(src="img/partners/3.png", alt="alt" width="50" height="50")
+            span WooCommerce
+          li.partners__item.partners-item
+            img(src="img/partners/4.png", alt="alt" width="50" height="50")
+            span Canva
+          li.partners__item.partners-item
+            img(src="img/partners/5.png", alt="alt" width="50" height="50")
+            span RBS
+        hr.partners__bottom
+      // Partners end
+
+      // Solutions start
+      section.solutions
+        .solutions__wrapper
+          h2.section-title.solutions__title Решения для маркетинга любых сфер деятельности
+          .solutions-tabs
+
+            button.solutions-item__btn.solutions-item-btn.solutions-item-btn_enterprise
+              include ../img/solutions/enterprise.svg
+              span Предприятие
+              i.icon-chevron
+            .solutions-item__content.solutions-item-content
+              h3.solutions-item-content__title Предприятие
+              .solutions-item-content__text
+                p Учитывая ключевые сценарии поведения, выбранный нами инновационный путь требует от нас анализа переосмысления внешнеэкономических политик. Вот вам яркий пример современных тенденций — сложившаяся структура организации в значительной степени обусловливает важность форм воздействия. Идейные соображения высшего порядка, а также синтетическое тестирование играет важную роль в формировании прогресса профессионального сообщества.
+              a(href="#").solutions-item-content__link Узнать подробнее
+
+            button.solutions-item__btn.solutions-item-btn.solutions-item-btn_sms.solutions-item-btn_active
+              include ../img/solutions/sms.svg
+              span Самозанятые
+              i.icon-chevron
+            .solutions-item__content.solutions-item-content.solutions-item-content_active
+              h3.solutions-item-content__title Самозанятые
+              .solutions-item-content__text
+                p Но убеждённость некоторых оппонентов не оставляет шанса для инновационных методов управления процессами. Есть над чем задуматься: независимые государства описаны максимально подробно.
+                p Безусловно, выбранный нами инновационный путь является качественно новой ступенью новых предложений. В целом, конечно, базовый вектор развития способствует повышению качества модели развития.
+              a(href="#").solutions-item-content__link Узнать подробнее
+
+            button.solutions-item__btn.solutions-item-btn.solutions-item-btn_agencies
+              include ../img/solutions/agencies.svg
+              span Агентсва
+              i.icon-chevron
+            .solutions-item__content.solutions-item-content
+              h3.solutions-item-content__title Агентсва
+              .solutions-item-content__text
+                p Не следует, однако, забывать, что реализация намеченных плановых заданий обеспечивает актуальность новых предложений. Безусловно, существующая теория прекрасно подходит для реализации существующих финансовых и административных условий! Противоположная точка зрения подразумевает, что сделанные на базе интернет-аналитики выводы своевременно верифицированы.
+                p Идейные соображения высшего порядка, а также сложившаяся структура организации позволяет выполнить важные задания по разработке форм воздействия. 
+              a(href="#").solutions-item-content__link Узнать подробнее
+
+            button.solutions-item__btn.solutions-item-btn.solutions-item-btn_institution
+              include ../img/solutions/institution.svg
+              span Организации
+              i.icon-chevron
+            .solutions-item__content.solutions-item-content
+              h3.solutions-item-content__title Организации
+              .solutions-item-content__text
+                p Как уже неоднократно упомянуто, явные признаки победы институционализации могут быть ограничены исключительно образом мышления. В рамках спецификации современных стандартов, независимые государства являются только методом политического участия и объединены в целые кластеры себе подобных.
+              a(href="#").solutions-item-content__link Узнать подробнее
+      // Solutions end
+
+      // GDPR start
+      section.gdpr
+        .gdpr__wrapper
+          h2.gdpr__title.section-title Совместимость с GDPR
+          p.gdpr__descr.section-descr Быть полностью прозрачным и полностью соответствовать полям согласия на получение ответа. Разрешите вашим контактам предоставить свое надлежащее согласие сразу после регистрации.
+          .gdpr__features
+            .gdpr-features-list
+              .gdpr-features-item.gdpr-features-item_1
+                img.gdpr-features-item__img(src="img/gdpr/1.png", alt="alt" width="70" height="70")
+                h3.gdpr-features-item__title Служба поддержки 
+                p.gdpr-features-item__descr Управление электронной почтой упрощает необходимые вам инструменты
+                .gdpr-features-item-decor-1
+                  img(src="img/gdpr/ava.png", alt="ава Леонарда" width="40" height="40")
+                  p Вам пришло сообщение от Леонарда!
+              .gdpr-features-item.gdpr-features-item_2
+                img.gdpr-features-item__img(src="img/gdpr/2.png", alt="alt" width="70" height="70")
+                h3.gdpr-features-item__title Отслеживание местоположения
+                p.gdpr-features-item__descr Ускорьте свой бизнес и поднимите планку
+                .gdpr-features-item-decor-2
+                  img(src="img/gdpr/gmail.png", alt="gmail" width="64" height="64")
+          ul.gdpr__list
+            li.gdpr__list-item Все страны мира
+            li.gdpr__list-item Отслеживание изменений
+            li.gdpr__list-item Создание мультиполей
+            li.gdpr__list-item Полная интеграция
+          a(href="#").gdpr__btn.btn Узнать подробнее
+      // GDPR end
+
+      // Tool start
+      section.tool
+        .tool__wrapper
+          h2.tool__title.section-title Получите доступ к надежному инструменту
+          p.tool__descr.section-descr Если вы читаете это, у вас уже есть доступ к надежному инструменту маркетинга по электронной почте.
+          img.tool__img(src="img/tool.png", alt="tool" width="743" height="489")
+          .tool__btn
+            a(href="#").btn Узнать подробнее
+      // Tool end
+
+      // Conversations start 
+      section.conversations
+        .conversations__wrapper
+          h2.conversations__title.section-title Начинайте беседу сразу после ответа
+          p.conversations__descr.section-descr Персонализируйте холодные электронные письма, автоматизируйте последующие действия и взаимодействуйте с потенциальными клиентами по всем каналам.
+          img.conversations__img(src="img/conversations.png", alt="tool" width="602" height="438")
+          .conversations__btn
+            a(href="#").btn Узнать подробнее
+      // Conversations end 
+
+      // Features start 
+      section.features
+        .features__wrapper
+          h2.features__title.section-title Автоматизация маркетинга по электронной почте стала простой
+          p.features__descr.section-descr Маркетологи электронной почты добиваются успеха, игнорируя лучшие практики и сосредотачиваясь на своих клиентах.
+          ul.features__list
+            li.features__item.features-item
+              span.features-item__num 01
+              h3.features-item__title Расширяя свой бизнес
+              p.features-item__descr.section-descr Попробуйте бесплатно, чтобы узнать, насколько простым может быть маркетинг по электронной почте.
+            li.features__item.features-item
+              span.features-item__num 02
+              h3.features-item__title Бесплатная регистрация
+              p.features-item__descr.section-descr В частности, постоянное информационно-пропагандистское обеспечение нашей деятельности.
+            li.features__item.features-item
+              span.features-item__num 03
+              h3.features-item__title Изучите свои варианты
+              p.features-item__descr.section-descr Новая модель деятельности создаёт необходимость включения в производственный план.
+          a(href="#").features_btn.btn Начать работу
+      // Features end 
+      
+      // Testimonials start
+      section.testimonials
+        .testimonials__wrapper
+          h2.testimonials__title.section-title Отзывы
+          p.testimonials__descr.section-descr Задача организации, в особенности же граница обучения кадров создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса прогресса профессионального сообщества.
+          .testimonials__slider
+            .testimonials-slider.swiper
+              .swiper-wrapper
+                .swiper-slide.slider-item
+                  p.slider-item__big-quote
+                    strong “Клиенты заинтересованы в новых идеях”.
+                  .slider-item__content
+                    p.slider-item__quote “Мне было легко фиксировать свои идеи и набрасывать визуальные эффекты. Процесс внедрения и модернизации существующих финансовых и административных условий”
+                    .slider-item__person
+                      img.slider-item__person-img(src="img/avatars/1.png", alt="Петя Макеев" width="48" height="48")
+                      p.slider-item__person-name Петя Макеев
+                      p.slider-item__person-position — Менеджер по маркетингу
+                .swiper-slide.slider-item
+                  p.slider-item__big-quote
+                    strong “Нашу победу сопровождал шёпот бессменных лидеров”.
+                  .slider-item__content
+                    p.slider-item__quote “А также сделанные на базе интернет-аналитики выводы являются только методом политического участия и ассоциативно распределены по отраслям.”
+                    .slider-item__person
+                      img.slider-item__person-img(src="img/avatars/2.png", alt="Петя Макеев" width="48" height="48")
+                      p.slider-item__person-name Александр Макеев
+                      p.slider-item__person-position — SEO-Гуру
+                .swiper-slide.slider-item
+                  p.slider-item__big-quote
+                    strong “Не следует забывать, что чистый разум не скован границами”.
+                  .slider-item__content
+                    p.slider-item__quote “Ясность нашей позиции очевидна: высокое качество позиционных исследований влечет за собой процесс внедрения и модернизации существующих финансовых и административных условий.”
+                    .slider-item__person
+                      img.slider-item__person-img(src="img/avatars/3.png", alt="Петя Макеев" width="48" height="48")
+                      p.slider-item__person-name Александра Макеева
+                      p.slider-item__person-position — Интернет-аналитик
+            .testimonials-pagination
+            button.testimonials-slider__btn.testimonials-slider__btn_prev(aria-label="Предыдущий отзыв")
+              i.icon-chevron
+            button.testimonials-slider__btn.testimonials-slider__btn_next(aria-label="Следующий отзыв")
+              i.icon-chevron
+      // Testimonials end
+
+      // Platform start
+      section.platform
+        .platform__wrapper
+          h2.platform__title.section-title Все, что вам нужно, на единой платформе
+          ul.platform__items
+            li.platform-item
+              h3.platform-item__title Комплекс лучших практик и советов
+              p.platform-item__descr.section-descr Но синтетическое тестирование о возможностях первоочередных требований.
+              a(href="#").platform-item__btn.btn Узнать подробнее
+            li.platform-item
+              h3.platform-item__title Обучение кадров — приоритетная задача
+              p.platform-item__descr.section-descr Предварительные выводы: граница обучения кадров требует от нас анализа вывода текущих активов.
+              a(href="#").platform-item__btn.btn Узнать подробнее
+      // Platform end
+
+      // About start
+      .about
+        .about__wrapper
+          p.about__text С помощью наших бесплатных ресурсов вы станете экспертом в области прямого маркетинга. Узнайте, как получить максимальную отдачу от инструмента.
+          .about__stats.about-stats
+            ul.about-stats__percents
+              li.about-stats__percents-item
+                span.about-stats__percent <span id="first-percent">120</span>%
+                span.about-stats__percent-caption Прирост пользователей
+              li.about-stats__percents-item
+                span.about-stats__percent <span id="second-percent">250</span>%
+                span.about-stats__percent-caption Прирост вовлеченности
+            a(href="#").about-stats__link Узнать подробнее
+      // About end
+
+    // main end
+
+    // Footer start
+    include components/footer
+    // Footer end
+
+    // Modals start
+    include components/modals
+    // Modals end
+    
+    include components/__scripts

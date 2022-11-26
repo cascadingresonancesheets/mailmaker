@@ -1,0 +1,151 @@
+// No scroll
+.no-scroll {
+  overflow: hidden;
+  min-height: 150vh !important;
+  height: 150vh !important;
+}
+
+// Backdrop
+.backdrop {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(#000, 0.4);
+  opacity: 0;
+  transition: 0.3s;
+
+  &.visible {
+    opacity: 1;
+  }
+}
+
+// Mobile only
+@mixin m-only {
+  @media screen and (min-width: $xl) {
+    display: none !important;
+  }
+}
+.m-only {
+  @include m-only;
+}
+
+// PC only
+@mixin pc-only {
+  @media screen and (max-width: ($xl - 1px)) {
+    display: none !important;
+  }
+}
+.pc-only {
+  @include pc-only;
+}
+
+// wrapper
+@mixin wrapper {
+  margin: 0 auto;
+  max-width: 1210px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &__content {
+    flex: 1;
+    padding-top: 0;
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+
+  @media screen and (max-width: 1016px) {
+    margin: 0 16px;
+    max-width: 100%;
+  }
+}
+
+@mixin section-offset {
+  padding-top: 160px;
+
+  @media screen and (max-width: $xl) {
+    padding-top: 90px;
+  }
+
+  // @media screen and (max-width: $md) {
+  //   padding-top: 72px;
+  // }
+
+  // @media screen and (max-width: $sm) {
+  //   padding-top: 55px;
+  // }
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.25;
+  color: $black;
+
+  @media screen and (max-width: $xl) {
+    font-size: 36px;
+  }
+
+  @media screen and (max-width: $md) {
+    font-size: 28px;
+  }
+
+  @media screen and (max-width: $sm) {
+    font-size: 24px;
+  }
+}
+
+.section-descr {
+  line-height: 1.5;
+  color: $gray;
+
+  @media screen and (max-width: $sm) {
+    font-size: 15px;
+  }
+}
+
+.btn {
+  background-color: #fff;
+  border: 1px solid $main;
+  font-weight: 700;
+  font-size: 17px;
+  color: $main;
+  padding: 15px 30px;
+  display: inline-block;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: $main;
+    color: #fff;
+  }
+
+  @media screen and (max-width: $sm) {
+    font-size: 15px;
+    padding: 15px 25px;
+    background-color: $main;
+    color: #fff;
+  }
+}
+
+.close-btn {
+  width: 36px;
+  height: 36px;
+
+  &__icon {
+    font-size: 32px;
+    color: #bdbdbd;
+    transition: 0.2s;
+  }
+}

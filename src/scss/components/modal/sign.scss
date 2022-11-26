@@ -1,0 +1,51 @@
+.modal-sign {
+  background-color: #fff;
+  padding: 32px 48px;
+  border-radius: 4px;
+  box-shadow: 4px 4px 10px 0px rgba(34, 60, 80, 0.16);
+  width: 450px;
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-30%);
+  transition: 0.3s;
+  display: inline-block;
+  text-align: initial;
+  margin-top: 12vh;
+  margin-bottom: 50px;
+
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 25px;
+    color: $black;
+    padding-bottom: 36px;
+    max-width: calc(100% - 36px);
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    &:hover {
+      .close-btn__icon {
+        color: #7a7a7a;
+      }
+    }
+  }
+
+  @media screen and (max-width: $sm) {
+    width: 100%;
+    padding: 20px;
+
+    &__title {
+      font-size: 20px;
+    }
+  }
+}
